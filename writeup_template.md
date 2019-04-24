@@ -1,4 +1,4 @@
-**Advanced Lane Finding Project**
+## Advanced Lane Finding Project
 
 The goals / steps of this project are the following:
 
@@ -51,11 +51,11 @@ The result i got is this:
 
 #### 2. Using color transforms and gradients to create a thresholded binary image. 
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding function `hls_sobel_combination()` is defined at lines 1 through 33 in the 4th code cell).  Here's an example of my output for this step.
+I used a combination of color and gradient thresholds to generate a binary image (thresholding function `color_thresholding()` is defined at lines 1 through 33 in the 4th code cell).  Here's an example of my output for this step.
 
 ![Combined Binary Thresholded Image][image4]
 
-I converted the image to HLS then used a thresholded S channel, Which provides the clearer lanes across different conditions, and combined it with a thresholded Sobel X gradient to obtain a combined thresholded binary image with clear enough lanes to detect later in the project.
+I converted the image to LAB and LUV then used a thresholded B channel and L channel, Which provides the clearer lanes across different conditions, to obtain a combined thresholded binary image with clear enough lanes to detect later in the project.
 
 #### 3. Performeing a perspective transform.
 
@@ -88,7 +88,7 @@ I also prepared a `untransform_perspective()` using an inverse transform matrix 
 
 #### 4. Identifying lane-line pixels and fit their positions with a polynomial.
 
-This is done in the 5th code cell where i defined a `fit_polynomial()` functions that takes a `binary_warped` image as a parameter and in turn calls the `find_lane_pixels()` function which utilizes a histogram to identify where the lanes start then using a sliding window algorithm to detect the lanes rather accuratelyand returning them in order to fit my lane lines with a 2nd order polynomial kinda like this:
+This is done in the 6th code cell where i defined a `fit_polynomial()` functions that takes a `binary_warped` image as a parameter and in turn calls the `find_lane_pixels()` function which utilizes a histogram to identify where the lanes start then using a sliding window algorithm to detect the lanes rather accuratelyand returning them in order to fit my lane lines with a 2nd order polynomial kinda like this:
 
 ![Lane lines detcted image][image6]
 
@@ -96,15 +96,14 @@ This is done in the 5th code cell where i defined a `fit_polynomial()` functions
 
 #### 5. Calculating the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I defined a function in the 7th code cell `measure_curvature_real()` to measure the curvature.
+I defined a function in the 8th code cell `measure_curvature_real()` to measure the curvature.
 First i define conversions in x and y from pixels space to meters
-Then i search around the discovered lane using the `search_around_poly()` function, which is defined in the 6th code cell.
 Then i define y-value where we want radius of curvature to be the maximum y-value, corresponding to the bottom of the image.
 Lastly i calculate the R_curve (radius of curvature).
 
 #### 6. An example final image output that previews the full pipeline.
 
-I implemented this step in lines 23 through 55 in the 7th code cell. Here is an example of my result on a test image:
+I implemented this step in the 9th code cell. Here is an example of my result on a test image:
 
 ![Result Image][image8]
 
