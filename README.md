@@ -1,8 +1,4 @@
-## Advanced Lane Finding
-
 **Advanced Lane Finding Project**
-
-In this project, the goal is to write a software pipeline to identify the lane boundaries in a video.
 
 The goals / steps of this project are the following:
 
@@ -17,13 +13,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/undistort_output.png "Undistorted Chess board"
+[image1]: ./examples/undistort_output.jpg "Undistorted Chess board"
 [image2]: ./test_images/test1.jpg "Road Transformed"
-[image3]: ./examples/undistort_road_output.png "Undistorted Road"
+[image3]: ./examples/undistort_road_output.jpg "Undistorted Road"
 [image4]: ./examples/binary_combo_example.jpg "Binary Example"
 [image5]: ./examples/warped.jpg "Warp Example"
 [image6]: ./examples/color_fit_lines_1.jpg "Fit Visual"
-[image7]: ./examples/color_fit_lines_1.jpg "Fit Visual"
+[image7]: ./examples/color_fit_lines_2.jpg "Fit Visual"
 [image8]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
