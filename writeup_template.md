@@ -114,7 +114,7 @@ I implemented this step in lines 23 through 55 in the 7th code cell. Here is an 
 
 #### 1. The final output!
 
-Here's a ![Result Video][video1]
+Here's a [link to my video result](./project_video.mp4)
 
 ---
 
