@@ -115,6 +115,7 @@ I implemented this step in the 9th code cell. Here is an example of my result on
 #### 1. The final output!
 
 Here's a [link to my video result](./output_video.mp4)
+
 Here's a [link to my video result with search around lanes](./output_video_with_search.mp4)
 
 ---
