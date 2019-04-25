@@ -94,12 +94,16 @@ This is done in the 6th code cell where i defined a `fit_polynomial()` functions
 
 ![Lane lines detcted image][image7]
 
+Note: In the Advanced_Lane_Finding_With_Search_Project.ipynb in the case of video after finding the lane in the first frame instead of searching the entire next frame again we use a function `search_around_poly()` to search in a defined area around the detected lane to save processing time.
+
 #### 5. Calculating the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I defined a function in the 8th code cell `measure_curvature_real()` to measure the curvature.
+I defined a function in the 7th code cell `measure_curvature_real()` to measure the curvature.
 First i define conversions in x and y from pixels space to meters
 Then i define y-value where we want radius of curvature to be the maximum y-value, corresponding to the bottom of the image.
 Lastly i calculate the R_curve (radius of curvature).
+
+The position of the vehicle with respect to center is calculated in the 8th code cell where a `get_vehicle_position()` function is defined that takes `lane_center` as a parameter and uses the `image_center` to calculate the position.
 
 #### 6. An example final image output that previews the full pipeline.
 
@@ -114,6 +118,7 @@ I implemented this step in the 9th code cell. Here is an example of my result on
 #### 1. The final output!
 
 Here's a [link to my video result](./output_video.mp4)
+Here's a [link to my video result with search around lanes](./output_video_with_search.mp4)
 
 ---
 
