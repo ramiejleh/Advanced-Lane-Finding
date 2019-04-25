@@ -19,8 +19,7 @@ The goals / steps of this project are the following:
 [image4]: ./examples/binary_combo_example.jpg "Binary Example"
 [image5]: ./examples/warped.jpg "Warp Example"
 [image6]: ./examples/color_fit_lines_1.jpg "Fit Visual"
-[image7]: ./examples/color_fit_lines_2.jpg "Fit Visual"
-[image8]: ./examples/example_output.jpg "Output"
+[image7]: ./examples/example_output.jpg "Output"
 [video1]: ./project_video.mp4 "Video"
 
 ---
@@ -92,8 +91,6 @@ This is done in the 6th code cell where i defined a `fit_polynomial()` functions
 
 ![Lane lines detcted image][image6]
 
-![Lane lines detcted image][image7]
-
 Note: In the Advanced_Lane_Finding_With_Search_Project.ipynb in the case of video after finding the lane in the first frame instead of searching the entire next frame again we use a function `search_around_poly()` to search in a defined area around the detected lane to save processing time.
 
 #### 5. Calculating the radius of curvature of the lane and the position of the vehicle with respect to center.
@@ -109,7 +106,7 @@ The position of the vehicle with respect to center is calculated in the 8th code
 
 I implemented this step in the 9th code cell. Here is an example of my result on a test image:
 
-![Result Image][image8]
+![Result Image][image7]
 
 ---
 
